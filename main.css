@@ -1,0 +1,73 @@
+.style {
+  background-color: azure;
+  text-align: center;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+.special {
+  text-decoration: line-through;
+}
+
+.http {
+  text-decoration: overline;
+  color: chartreuse;
+}
+
+.ends {
+  color: chocolate;
+  text-decoration: line-through;
+}
+
+.border {
+  border: 2px solid lightslategrey;
+}
+
+.odd {
+  background-color: blue;
+}
+
+.green {
+  background-color: magenta;
+}
+
+.first {
+  width: 50%;
+  border: 3px solid lawngreen;
+}
+
+.third {
+  width: 50%;
+  border: 4px solid lightsalmon;
+}
+
+.append {
+  background-color: lightseagreen;
+  color: black;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.prepend {
+  background-color: lime;
+  color: wheat;
+  font-size: 2rem;
+  text-transform: lowercase;
+  text-align: right;
+}
+
+.spec {
+  background-color: lightcyan;
+  color: teal;
+  font-size: 2rem;
+}
+
+.spec-two {
+  color: teal;
+}
+/*# sourceMappingURL=main.css.map */

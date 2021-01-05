@@ -1,0 +1,204 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// Button Hover Effects
+#button{
+
+    .underline {
+        width: 300px;
+        height: .3rem;
+    }
+
+    .button{
+
+        .btn{
+            
+            // transition: property Duration
+            // transition-timing-function:linear - specifies a transition effect with the same speed from start to end.
+            transition: color 0.3s linear;
+
+            //position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+            position: relative;
+
+            // Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width.
+            display: block;
+
+            &:hover{
+                color: lightyellow;
+            }
+
+            &::before{
+
+                content: '';
+
+                //position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+                // Thats why we use top right bottom and left
+                position: absolute;
+
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+
+                /* z-index:stacks one on each other based on value  */
+                z-index: -1;
+
+                // The transform-origin property allows you to change the position of transformed elements.
+                // 2D transformations can change the x- and y-axis of an element. 
+                transform-origin: 0 0;
+
+                // transition:Property Duration
+                transition: transform 0.5s;
+
+                // A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.
+                transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+
+            }
+
+        }
+
+    }
+
+    .btn-one::before {
+        // The scaleX() method increases or decreases the width of an element.
+        transform: scaleX(0);
+    }
+
+    .btn-one:hover::before {
+        // The scaleX() method increases or decreases the width of an element.
+        transform: scaleX(1);
+    }
+
+}
+
+.dis{
+    display:block;
+}
+
+#products{
+
+    .item{
+        .card {
+            // position: relative, it’ll remain “in the flow” of the layout but you can move it around!
+            position: relative;
+
+            .image-left {
+                // position: absolute takes elements “out of flow” so its grid space gets collapsed. 
+                // So we use top right left bottom.
+                position: absolute;
+
+                top: 2%;
+                left: 2%;
+
+                .btn {
+                    background-color: rgb(46, 110, 46);
+                }
+            }
+
+            .image-right {
+                // position: absolute takes elements “out of flow” so its grid space gets collapsed. 
+                // So we use top right left bottom.
+                position: absolute;
+
+                left: 75%;
+                top: 1%;
+
+                // The opacity-level describes the transparency-level.
+                opacity: 0;
+
+                height: 150px;
+
+                // transition:Default Value Duration
+                // Timing-function:ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+                transition: all 0.3s ease;
+
+                .fa-eye:hover,
+                .fa-heart:hover,
+                .fa-shopping-basket:hover {
+
+                    width: 40px;
+                    color: lightyellow;
+                    background-color: rgb(86, 168, 86);
+                    padding: 5px;
+
+                }
+
+                .title {
+                    border: none;
+                }
+
+                .icon:hover {
+                    cursor: pointer;
+                }
+
+            }
+
+            .card-body {
+
+                margin-top: -100px;
+
+                .card-title {
+
+                    h3:hover {
+                        cursor: pointer;
+                        color: rgb(81, 134, 81);
+                    }
+
+                }
+            }
+
+            .card-footer {
+                .stars {
+                    .fa-star:hover {
+                        color: #F1C407;
+                    }
+                }
+
+                .strike {
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        .card:hover {
+            // outline:size style color
+            // outline: 3px solid lightgrey;
+
+            .image-right {
+                // The opacity-level describes the transparency-level.
+                opacity: 1;
+            }
+        }
+    }
+    
+}
+
+// For Glider
+.glider{
+    figure{
+        background-color: #deb887;
+
+        // Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width.
+        display: block;
+        
+        padding: 1rem;
+        margin: 1em;
+
+        blockquote{
+            text-align: center;
+            text-transform: capitalize;
+            color: blue;
+            padding: 1em;
+        }
+
+        figcaption{
+            color: blueviolet;
+            font-style: italic;
+        }
+    }
+}
